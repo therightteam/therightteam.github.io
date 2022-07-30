@@ -7,13 +7,13 @@
 			</div>
 			<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
 			 <el-menu-item index="2" style="width: 50px;">首页</el-menu-item>
-			 <el-menu-item index="3"style="width: 50px;">沸点</el-menu-item>
-			 <el-menu-item index="1"style="width: 50px;">课程</el-menu-item>
-			 <el-menu-item index="5"style="width: 50px;">直播</el-menu-item>
-			 <el-menu-item index="6"style="width: 50px;">活动</el-menu-item>
-			 <el-menu-item index="7"style="width: 50px;">商城</el-menu-item>
-			 <el-menu-item index="8"style="width: 50px;">APP</el-menu-item>
-			 <el-menu-item index="9"style="width: 50px;">插件</el-menu-item>
+			 <el-menu-item index="3" style="width: 50px;">沸点</el-menu-item>
+			 <el-menu-item index="1" style="width: 50px;">课程</el-menu-item>
+			 <el-menu-item index="5" style="width: 50px;">直播</el-menu-item>
+			 <el-menu-item index="6" style="width: 50px;">活动</el-menu-item>
+			 <el-menu-item index="7" style="width: 50px;">商城</el-menu-item>
+			 <el-menu-item index="8" style="width: 50px;">APP</el-menu-item>
+			 <el-menu-item index="9" style="width: 50px;">插件</el-menu-item>
 			</el-menu>
 			<el-input v-model="input" placeholder="探索稀土掘金" style="width: 200px; padding-left:80px ;padding-top:4px" >	
 			</el-input>
