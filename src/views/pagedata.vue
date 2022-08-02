@@ -1,13 +1,9 @@
 <template>
 	<div class="body">
 		<div class="body-centre">
-			
 			<p>我是文章内容</p>
-			
-			
 		</div>
 		<div class="body-right">
-		
 		</div>
 	</div>
 </template>
