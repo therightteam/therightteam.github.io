@@ -1,3 +1,11 @@
 {
-	
+	"pagedata":[
+        {"id":"haoshao","time":"2天前","datatype":"前端","articletitle":"每行代码都队111111","datacontent":{"title1":"每行代码都队成功完成项目哈哈哈哈哈哈哈哈哈哈哈哈","content":"首先恭喜我们小组，在大家的努力之下将这个项目完成。我本人有很大收获，从学习github，到elementui组件的挑选，尽可能做到跟掘金官网一样，在这个过程中是艰辛的。尤其是首页的无限滚动，到现在也还是有着很多问题，点进去的内容页面标题这块儿也是一大难点","title2":"我与组长的交流","content2":"我跟组长的交流还是挺多的，从中学到了很多东西","content2photo":"./images/content2-photo.jpg"},"photo":"./images/nei1.jpg"},
+        {"id":"曹浩","time":"3天前","datatype":"后端","articletitle":"每行代码都队嗯嗯嗯","datacontent":"每行代码都队成功完成项目","photo":"./images/logo.jpg"},
+        {"id":"酱紫","time":"3天前","datatype":"前端","articletitle":"啊啊啊啊每行代码都队","datacontent":"每行代码都队成功完成项目","photo":"./images/hui.jpg"},
+        {"id":"鹿哈","time":"3天前","datatype":"ios","articletitle":"每行代码都队呃呃呃呃呃呃","datacontent":"每行代码都队成功完成项目不错不错吧吧v不错凄凄切切群群群群打点滴群群","photo":"./images/g4.jpg"},
+        {"id":"小天才","time":"4天前","datatype":"前端","articletitle":"哈哈哈哈哈每行代码都队","datacontent":"每行代码都队成功完成项目","photo":"./images/g5.jpg"},
+        {"id":"大天才","time":"4天前","datatype":"后端","articletitle":"不不不不不每行代码都队","datacontent":"每行代码都队成功完成项目","photo":"./images/g4.jpg"},
+        {"id":"超大大天才","time":"5天前","datatype":"前端","articletitle":"每行代码都队！！！！！！","datacontent":"每行代码都队成功完成项目","photo":"./images/g5.jpg"}
+    ]
 }

@@ -20,7 +20,7 @@
 					<p >热榜</p>
 				</div>
 				<!-- 首页文章标题时间等信息 -->
-				<div class="body-centre-txt"  v-for="i in count" @click="goPage()">
+				<div  class="body-centre-txt"  v-for="i in count " :id="pagedata[(i-1)%6].id" @click="goPage()">
 					<!-- 左侧信息 -->
 					<div style="width:70%;">
 						<!-- infinite-scroll-distance="400" -->
@@ -58,7 +58,7 @@
 								overflow:hidden;  
 								white-space: nowrap;  
 								text-overflow:ellipsis;">
-							{{pagedata[(i-1)%6].datacontent}}</p>
+							{{pagedata[(i-1)%6].datacontent.title1}}</p>
 						</div>
 					</div >
 					<!-- 右侧图片 -->
@@ -67,6 +67,8 @@
 					</div>
 				</div>	
 			</div>
+			<!-- 传值 -->
+			<pagadata :id = "name"></pagadata>
 			<div class="body-right1">
 				<!-- 悬浮广告 -->
 				<div class="fixedSearch" v-show="showFixedSearch">
@@ -126,29 +128,23 @@
 					<p class="haha">举报邮箱：ffdback@xitu.io</a></p>
 					<p class="haha">&copy;2022稀土掘金</a></p>
 				</div>
-			
 			</div>
 		</div>
 	</div>
+	
 </template>
 
 <script>
-	export default{
+	import datajson from '../../public/data/data.json';
+	export default {
 		index :'Topage',
 		data() {
 		    return {
-			showFixedSearch: false,
-			busy:false,
-			count:1,
-			pagedata:[
-				{id:"haoshao",time:"2天前",datatype:"前端",articletitle:"每行代码都队111111",datacontent:"每行代码都队成功完成项目哈哈哈哈哈哈哈哈哈哈哈哈",photo:require("../../public/images/tou.jpg")},
-				{id:"曹浩",time:"3天前",datatype:"后端",articletitle:"每行代码都队嗯嗯嗯",datacontent:"每行代码都队成功完成项目",photo:require("../../public/images/logo.jpg")},
-				{id:"酱紫",time:"3天前",datatype:"前端",articletitle:"啊啊啊啊每行代码都队",datacontent:"每行代码都队成功完成项目",photo:require("../../public/images/hui.jpg")},
-				{id:"鹿哈",time:"3天前",datatype:"ios",articletitle:"每行代码都队呃呃呃呃呃呃",datacontent:"每行代码都队成功完成项目不错不错吧吧v不错凄凄切切群群群群打点滴群群",photo:require("../../public/images/g4.jpg")},
-				{id:"小天才",time:"4天前",datatype:"前端",articletitle:"哈哈哈哈哈每行代码都队",datacontent:"每行代码都队成功完成项目",photo:require("../../public/images/g5.jpg")},
-				{id:"大天才",time:"4天前",datatype:"后端",articletitle:"不不不不不每行代码都队",datacontent:"每行代码都队成功完成项目",photo:require("../../public/images/g4.jpg")},
-				{id:"超大大天才",time:"5天前",datatype:"前端",articletitle:"每行代码都队！！！！！！",datacontent:"每行代码都队成功完成项目",photo:require("../../public/images/g5.jpg")}
-			],
+				name:"",
+				pagedata :datajson.pagedata,
+				showFixedSearch: false,
+				busy:false,
+				count:1,
 		        activeIndex: '1',
 		        activeIndex2: '1'
 		      };
@@ -175,7 +171,8 @@
 					 this.busy = true
 					// setTImeout(要执行的代码,等待的毫秒数)
 					setTimeout(() =>{
-						this.count+=1
+						this.count+=1 
+						this.busy = false
 					},300)
     			  },
 				  // 跳转到另一个页面
@@ -188,7 +185,7 @@
 				// 当count数值改变时执行
 				count:{
 					handler(){
-							this.busy = false
+						this.busy = false	
 					}
 				}
 			}
